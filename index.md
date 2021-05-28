@@ -17,7 +17,7 @@ These video introductions touch on similar contents, in limited time, and are ve
   - [Session 7: Ontologies and Data Modelling](https://github.com/SunoikisisDC/SunoikisisDC-2016-2017/wiki/Session-7:-Ontologies-and-Data-Modelling)
   - [https://github.com/SunoikisisDC/SunoikisisDC-2017-2018/wiki/Linked-Ancient-World-Data](https://github.com/SunoikisisDC/SunoikisisDC-2017-2018/wiki/Linked-Ancient-World-Data)
   - [https://github.com/SunoikisisDC/SunoikisisDC-2018-2019/wiki/Session-6.-Linked-Open-Data-for-Cultural-Heritage](https://github.com/SunoikisisDC/SunoikisisDC-2018-2019/wiki/Session-6.-Linked-Open-Data-for-Cultural-Heritage)
-- [Introduction to the Principles of Linked Open Data | Programming Historian](https://programminghistorian.org/en/lessons/intro-to-linked-data)
+- [Introduction to the Principles of Linked Open Data Programming Historian](https://programminghistorian.org/en/lessons/intro-to-linked-data)
 
 ## Data
 
