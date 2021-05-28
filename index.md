@@ -132,14 +132,14 @@ Try and navigate the superclasses of Q213924 and investigate, by navigating an e
 
 #### Evening Lecture 16:00 - Irene Vagionakis (UNIBO) on [_EFES and RDF_](https://docs.google.com/presentation/u/0/d/16RoH32CBSX9nC7OoYNohXvmlsQm9YkMvQQJqyrJggmU/edit)
 
-###
+
 
 
 ### Thursday 27 May 2021 - Using RDF data and reusing it
 
-#### Morning **9–**** 10** Triplestores and annotations
+#### Morning 9–10 _Triplestores and annotations_
 
-- [Apache Jena Fuseki](https://docs.google.com/presentation/d/e/2PACX-1vS6pI2RguLUncogkU7i4Any_7EdypWMWJHUmuxK3XtgnMlOAOUazR7P2-IbOSUGA8ZrYJNXlu6cLN2t/pub?start=false&amp;loop=false&amp;delayms=3000) [practical demonstration]
+- [Apache Jena Fuseki](https://docs.google.com/presentation/d/e/2PACX-1vS6pI2RguLUncogkU7i4Any_7EdypWMWJHUmuxK3XtgnMlOAOUazR7P2-IbOSUGA8ZrYJNXlu6cLN2t/pub?start=false&amp;loop=false&amp;delayms=3000) practical demonstration
 - Wikidata, Recogito, Hypothes.is Annotations and data reuse [practical demonstration]
 - Practical applications of LOD: FRBR, Lemon and the Lexicon of Ancient Ethiopic
 
@@ -193,8 +193,6 @@ Pick a manuscript from Beta Masaheft, look at the images and put together some t
 Do not like manuscripts? Why not download some RDF for a Papyrus from Papyri.info instead? Instead of Ligatus you may link some of the information present in the metadata to the EAGLE Vocabularies or the Getty Art &amp; Architecture Thesaurus.
 
 #### Evening Lecture 16:00 - Tom Gheldof (KULeuven) on [_Trismegistos and LOD_](https://drive.google.com/file/d/18R8WoykrGY3EBjcY45IkIzQ4GcdMr_6c/view?usp=sharing)
-
-###
 
 
 ### Friday 28 May 2021 - Modeling RDF and visualizing Linked Open Data
