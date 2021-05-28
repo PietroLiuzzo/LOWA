@@ -203,7 +203,7 @@ Step 2. Check out which resources you already know (FRBR(oo), Wikidata, Dbpedia,
 
 #### Afternoon 14–16 _SPARQL_
 
-- [OWL and Ontology design basics (RDFS, RDF](https://docs.google.com/presentation/d/e/2PACX-1vSfPx6OkspZdJSqcVIzCbw6V7prm1_KmjbLPcqKRdwal37FEJQPYXSJ1t7ryw_IOqabkGhzqrdKHb0b/pub?start=false&amp;loop=false&amp;delayms=3000)[_Plus_](https://docs.google.com/presentation/d/e/2PACX-1vSfPx6OkspZdJSqcVIzCbw6V7prm1_KmjbLPcqKRdwal37FEJQPYXSJ1t7ryw_IOqabkGhzqrdKHb0b/pub?start=false&amp;loop=false&amp;delayms=3000)[)](https://docs.google.com/presentation/d/e/2PACX-1vSfPx6OkspZdJSqcVIzCbw6V7prm1_KmjbLPcqKRdwal37FEJQPYXSJ1t7ryw_IOqabkGhzqrdKHb0b/pub?start=false&amp;loop=false&amp;delayms=3000)
+- [OWL and Ontology design basics (RDFS, RDF Plus)](https://docs.google.com/presentation/d/e/2PACX-1vSfPx6OkspZdJSqcVIzCbw6V7prm1_KmjbLPcqKRdwal37FEJQPYXSJ1t7ryw_IOqabkGhzqrdKHb0b/pub?start=false&amp;loop=false&amp;delayms=3000)
 - [SPARQL queries and responses](https://docs.google.com/presentation/d/e/2PACX-1vTOA5GP3vdAD2yFj54VmWpSuV-ykf6KOwjaM_O3IPOWAQmdGLhxe-Ibs6O1u7JEruA_d2GGSGI2uwfm/pub?start=false&amp;loop=false&amp;delayms=3000)
 
 ##### Exercise
@@ -221,7 +221,7 @@ Share your query [here](https://docs.google.com/document/d/1Zrdtr2wWFlFRWe7UyW5v
 Now try to get a map of the current location of &quot;written artefacts&quot; from Wikidata.
 
 You can start from this example query
-
+`````sparql
 #defaultView:Map
 
 # Map of Codices in Wikidata at their location (Q213924)
@@ -239,7 +239,7 @@ OPTIONAL{?manuscript wdt:P276 ?location .
 ?location wdt:P625 ?coordinates .}
 
 }
-
+`````
 Try and navigate the superclasses of Q213924 and investigate, by navigating an example (e.g. [Q204221](https://www.wikidata.org/wiki/Q204221)), the location property. What do you think?
 
 #### Evening Lecture 16:00 - Irene Vagionakis (UNIBO) on [_EFES and RDF_](https://docs.google.com/presentation/u/0/d/16RoH32CBSX9nC7OoYNohXvmlsQm9YkMvQQJqyrJggmU/edit)
@@ -451,7 +451,6 @@ The latest version of the CIDOC-CRM. The most important part is the one which li
 
 The Epigraphy.info Ontology Working group produced this document as a collaborative effort over the last few years. No one uses it yet. It attempts at going through the various types of information needed for epigraphy in the same way this was done in Nomisma for coins. It additionally uses a list of previously existing vocabularies specific to amphoric epigraphy for example, and an implementation of the CRMtex which did not exist before.
 
-##
 
 
 ## Learning outcomes
@@ -476,23 +475,6 @@ At the end of the training, participants will have received initial training to 
 
 − Understand and apply to their own needs the best practices of Linked Open Data.
 
-## Example Queries
-
-| **Query** | **Endpoint** | **aim** | **author** |
-| --- | --- | --- | --- |
-| #defaultView:Map# Map of Codices in Wikidata at their location (Q213924)SELECT \* WHERE { ?manuscript wdt:P31 wd:Q213924 ; rdfs:label ?itemLabel . OPTIONAL{?manuscript wdt:P276 ?location . ?location wdt:P625 ?coordinates .}} | [https://query.wikidata.org/](https://query.wikidata.org/) | Get a map with locations of Codices. | Pietro |
-| SELECT DISTINCT ?entity ?entityLabel ?writtenwork ?writtenworkLabel WHERE{ ?entity wdt:P106 wd:Q36180 ; wdt:P136 wd:Q358998 ; wdt:P21 wd:Q6581072 ; rdfs:label ?entityLabel . ?writtenwork wdt:P50 ?entity ; wdt:P407 wd:Q1860; rdfs:label ?writtenworkLabel .} | [https://query.wikidata.org/](https://query.wikidata.org/) | Get a list of female writers who wrote Utopian and Dystopian fiction in English language. | Fernanda |
-| #defaultView:BubbleChart# Map of Codices in Wikidata at their location (Q213924)SELECT ?placeLabel (count(?place) as ?count)WHERE { [wdt:P31 wd:Q213924 ; wdt:P276 ?place] . SERVICE wikibase:label { bd:serviceParam wikibase:language &quot;en&quot;. }}
-GROUP BY (?placeLabel)ORDER BY DESC(?count)
- | [https://query.wikidata.org/](https://query.wikidata.org/) | Get a Bubble chart of locations of Codices, if the location data is available. | Mohsen |
-| SELECT DISTINCT \* WHERE {?ethiopianperson wdt:P31 wd:Q5 ; wdt:P27 wd:Q115 ; wdt:P569 ?birthdate ; wdt:P570 ?deathdate . OPTIONAL {?ethiopianperson wdt:P7846 ?BMid .} }
- |
- | Ethiopian persons | Pietro |
-| #defaultView:MapSELECT ?item ?itemLabel ?coordWHERE{ ?item wdt:P31 wd:Q5 . # human ?item wdt:P735 wd:Q740790. # petra, female name ?item wdt:P19 ?place. ?place wdt:P625 ?coord. SERVICE wikibase:label { bd:serviceParam wikibase:language &quot;eng&quot;. }}
- | [https://query.wikidata.org/](https://query.wikidata.org/) | Map of birthplaces of female named Petra | Petra |
-| PREFIX epi: \&lt;http://edh-www.adw.uni-heidelberg.de/edh/ontology#\&gt;PREFIX foaf: \&lt;http://xmlns.com/foaf/0.1/\&gt;
-SELECT ?inscription ?person ?nameWHERE { ?inscription epi:hasPerson ?person . ?person foaf:name ?name . filter contains(?name, &quot;Avill&quot;)filter contains(?name, &quot;Cle&quot;)}LIMIT 20 | [https://edh-www.adw.uni-heidelberg.de/data/sparql](https://edh-www.adw.uni-heidelberg.de/data/sparql) | inscriptions containing Avill and Cle | Petra |
-| SELECT \*WHERE {{?s ?p ?o FILTER (CONTAINS(?o, &#39;nemor&#39;)) .}UNION{?s ?p ?o FILTER (CONTAINS(?o, &#39;silv&#39;)) .}}LIMIT 20 | [https://edh-www.adw.uni-heidelberg.de/data/sparql](https://edh-www.adw.uni-heidelberg.de/data/sparql) | Inscriptions mentioning silv\* or nemor\* on EDH (first 20 results). | Irene |
 
 Linked Open Data for Written Artefacts Program © 2021 by [Pietro Liuzzo](https://orcid.org/0000-0001-5714-4011)is licensed under [Attribution-NonCommercial 4.0 International](http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1)
 
